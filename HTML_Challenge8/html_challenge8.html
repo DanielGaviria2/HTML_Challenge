@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Accesible Form with style</title>
+	<style type="text/css">
+		*{
+			font-family: sans-serif;
+			font-size: 14pt;
+		}
+		body{
+			width: 100%;
+			max-width: 500px;
+			margin-left: calc((100% - 500px) / 2);
+		}
+
+		.input-field, textarea{
+			width: 95%;
+			border: none;
+			border-radius: 15px;
+			box-shadow: inset 0 0 5px #888;
+			padding: 5px;
+			padding-left: 10px;
+		}
+		.input-field:hover , textarea:hover, select:hover{
+			background-color: rgb(200,200,255);
+		}
+
+		fieldset{
+			border-color: #888;
+			border-radius: 30px;
+			box-shadow: 2px 2px 3px #888;
+			margin-bottom: 20px;
+		}
+
+		select{
+			width: 50%;
+			border: none;
+			border-radius: 15px;
+			box-shadow: inset 0 0 5px #888;
+			padding: 5px;
+			padding-left: 10px;
+		}
+
+		.button{
+			width: 50%;
+			margin: 10px;
+			margin-left: 25%;
+			border: none;
+			border-radius: 15px;
+			padding: 5px;
+			box-shadow: 1px 1px 5px #888;
+			cursor: pointer;
+		}
+
+		.button:hover{
+			background-color: yellow;
+		}
+
+	</style>
+</head>
+<body>
+	<form action="mailto:danielgaviria61@gmail.com" method="post">
+		<fieldset>
+			<legend>Purchases</legend>
+			<p><label for="product">Product name: </label>
+			<select name="product" required>
+				<option selected value="">Choose one</option>
+				<option>Ballons</option>
+				<option>Flowers</option>
+				<option>Candles</option>
+			</select><p>
+			<p><label for="quantity">Quantity: </label><br>
+			<input class="input-field" type="number" max="10" min="1" step="1" name="quantity" required/></p>
+		</fieldset>
+		<fieldset>
+			<legend>Personal Details</legend>
+			<p><label for="name">First Name: </label><br>
+			<input class="input-field" name="name" required /></p>
+			<p><label for="last">Last Name: </label><br>
+			<input class="input-field" name="last" required /></p>
+		</fieldset>
+		<fieldset>
+			<legend>Credit Card Details</legend>
+			<p>
+				<label>Credit card type: </label><br>
+				<input type="radio" name="coun" id="Visa" checked /><label for="col">Visa </label><br>
+				<input type="radio" name="coun" id="Master" /><label for="us">Master Card </label>
+			</p>
+			<p>
+				<label for="numCard">Credit Card Number: </label><br>
+				<input class="input-field" type="number" name="numCard" required />
+			</p>
+			<p>
+				<label for="Expired">Expiry Date: </label><br>
+				<input class="input-field" type="Date" name="Expired" />
+			</p>
+		</fieldset>
+		<fieldset>
+			<legend>Billing Information</legend>
+			<p>
+				<label for="area">Postal Address: </label> <br>
+				<textarea name="area" rows="6"></textarea>
+			</p>
+			<p>
+				<label for="comen">Commentaries: </label><br>
+				<textarea name="comen" rows="6"></textarea>
+			</p>
+		</fieldset>
+		
+		<input class="button" type="reset" name="reset" value="Reset Form" />
+		<input class="button"type="submit" name="submit" value="Send to email" />
+	</form>
+</body>
+</html>
