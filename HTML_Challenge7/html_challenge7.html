@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tables</title>
+	<style type="text/css">
+		.table-block__filaNum1 {
+			background-color: rgb(0,200,200);
+		}
+
+		th{ 
+			border-radius: 5%;
+			width:100px;
+			padding: 4px;
+			box-shadow: 1px 1px 3px #888;
+		 }
+
+		 .table-block__filaImpar{
+		 	background-color: #BBB;
+		 }
+
+		 .table-block__filaPar{
+		 	background-color: #EFEFEF;
+		 }
+
+		 .table-block__colCity{
+		 	border-left: solid 2px red;
+		 }
+	</style>
+</head>
+<body>
+	<table class="table-block" cellspacing="0">
+		<tr class="table-block__fila table-block__filaNum1">
+			<th><strong>City</strong></th>
+			<th><strong>January</strong></th>
+			<th><strong>February</strong></th>
+			<th><strong>March</strong></th>
+		</tr>
+		<tr class="table-block__fila table-block__filaImpar">
+			<th class="table-block__colCity"><strong>Sydney</strong></th>
+			<th>38.1</th>
+			<th>39.1</th>
+			<th>37.3</th>
+		</tr>
+		<tr class="table-block__fila table-block__filaPar">
+			<th class="table-block__colCity"><strong>Melbourne</strong></th>
+			<th>34.1</th>
+			<th>35.1</th>
+			<th>34.3</th>
+		</tr>
+		<tr class="table-block__fila table-block__filaImpar">
+			<th class="table-block__colCity"><strong>Adelaide</strong></th>
+			<th>34.3</th>
+			<th colspan="2">No data</th>
+		</tr>
+		<tr class="table-block__fila table-block__filaPar">
+			<th class="table-block__colCity"><strong>Hobart</strong></th>
+			<th>24.8</th>
+			<th>25.2</th>
+			<th>19.8</th>
+		</tr>
+	</table>
+</body>
+</html>

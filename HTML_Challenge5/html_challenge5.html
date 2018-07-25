@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple form</title>
+</head>
+<body>
+	<form method="post">
+		<p><label for="name">First Name: </label>
+		<input name="name"/></p>
+		<p><label for="last">Last Name: </label>
+		<input name="last"/></p>
+		<p><label for="user">User Name: </label>
+		<input name="user"/></p>
+		<p><label for="password">Password: </label>
+		<input type="password" name="password"/></p>
+		<p><label for="add">Address: </label>
+		<input name="add"/></p>
+		<p><label for="games">Favorite Game: </label>
+			<select name="games">
+				<option selected disabled hidden>Choose one</option>
+				<option>Mario</option>
+				<option>Zelda</option>
+				<option>Splatoon</option>
+			</select>
+		</p>
+		<p>
+			<label>Country: </label>
+			<input type="radio" name="coun" id="col" /><label for="col">Colombia </label>
+			<input type="radio" name="coun" id="us" /><label for="us">United States </label>
+			<input type="radio" name="coun" id="fra" /><label for="fra">France </label>
+			<input type="radio" name="coun" id="jap" /><label for="jap">Japon </label>
+		</p>
+		<p>
+			<label>Do you like watch movies?: </label>
+			<input type="checkbox" name="box"/><label for="box">Yes </label>
+		</p>
+		<p>
+			<label>Comment: </label><br>
+			<textarea type="textarea" name="area" rows="5" cols="40"/></textarea>
+		</p>
+		<button>Reset</button>
+		<input type="submit" name="submit" value="Submit" />
+	</form>
+</body>
+</html>
